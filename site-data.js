@@ -20,8 +20,8 @@ window.SITE = {
   },
 
   // Artist statement excerpt — pull-quote on the page
-  statement: "I write musicals about people who have lost their voices — sometimes literally, more often quietly, and almost always to the people who were supposed to love them best.",
-  statementMore: "My work tends to begin with an image rather than an argument: a yellowed scrap of paper folded into a wallet for twenty years; a woman who can’t find her lipstick and ends up sitting on the floor; a girl who sells her dead mother’s necklace to buy a man’s suit. I trust those images to carry the meaning, and I trust audiences to meet them.",
+  statement: "I am a storyteller, writing for the stage and the studio as a playwright, composer, and songwriter. I write about people who have quietly lost their voices, blending folk, rock, and contemporary musical theater to tell their stories.",
+  statementMore: "My work starts with a vivid image rather than a thesis: a yellowed scrap of paper in a wallet, a woman sitting on the floor, a girl trading a necklace for a man’s suit. Whether I am writing dialogue, composing a score, or producing a standalone track, I trust those images to carry the meaning.",
 
   works: [
     {
