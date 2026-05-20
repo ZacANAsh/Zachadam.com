@@ -429,7 +429,9 @@ function PContact() {
             WRITE TO ME
           </div>
           <a
-            href={`mailto:${S.contactEmail}?subject=${encodeURIComponent("Hello from zachadam.com")}`}
+            href="https://forms.gle/efLpN1bnAc4GMnzt9"
+            target="_blank"
+            rel="noreferrer"
             style={{
               display:"inline-flex", alignItems:"center", gap:20,
               padding:"28px 36px", background:P.charcoal, color:P.bgInk,
@@ -438,11 +440,11 @@ function PContact() {
               fontWeight:800, textTransform:"uppercase", textDecoration:"none"
             }}
           >
-            Send me an email
+            Contact me
             <span style={{ fontFamily:F.display, fontSize:32, lineHeight:1 }}>→</span>
           </a>
           <p style={{ fontFamily:F.body, fontStyle:"italic", fontSize:17, color:P.bgInkSub, lineHeight:1.5, marginTop:24, maxWidth:520 }}>
-            Opens your email client. I read everything; I'll write back as soon as I can.
+            Opens a short form. I read everything; I'll write back as soon as I can.
           </p>
         </div>
 
