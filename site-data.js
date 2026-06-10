@@ -20,9 +20,16 @@ window.SITE = {
     ]
   },
 
-  // Artist statement excerpt — pull-quote on the page
-  statement: "I am a storyteller, writing for the stage and the studio as a playwright, composer, and songwriter. I write about people who have quietly lost their voices, blending folk, rock, and contemporary musical theater to tell their stories.",
-  statementMore: "My work starts with a vivid image rather than a thesis: a yellowed scrap of paper in a wallet, a woman sitting on the floor, a girl trading a necklace for a man’s suit. Whether I am writing dialogue, composing a score, or producing a standalone track, I trust those images to carry the meaning.",
+  // Artist statement — pull-quote (statement) + excerpt beside photo (statementMore) + full text (statementFull)
+  statement: "I write musicals about people who have lost their voices — sometimes literally, more often quietly, and almost always to the people who were supposed to love them best.",
+  statementMore: "My work tends to begin with an image rather than an argument: a yellowed scrap of paper folded into a wallet for twenty years; a woman who can’t find her lipstick and ends up sitting on the floor; a girl who sells her dead mother’s necklace to buy a man’s suit. I trust those images to carry the meaning, and I trust audiences to meet them.",
+  statementFull: [
+    "The craft I keep returning to — across a contemporary chamber piece like <i>Homebound</i> and a meta fairytale like <i>Voice!</i> — is restraint. I want the dialogue and the lyric to do less than the staging and the silence. I want the song to land because the scene before it earned it, not because the song explains itself.",
+    "I came to musical theater after a long career as a commercial songwriter, and I think that path matters to the work. Pop songwriting taught me that a song has roughly thirty seconds to be true or it loses the room. Theater has given me the chance to ask what the song means — but the discipline of having to earn attention every line at a time has stayed with me, and I think it shows up in how my musicals are built: tight, image-forward, allergic to over-explanation.",
+    "My life as a writer has moved between New York, Los Angeles, Paris, Amsterdam, Tel Aviv, and Nashville, and I think that matters too. I’ve never quite belonged to one scene, and I’ve stopped trying to. What I’ve taken from each place is a sharper ear for how people perform themselves when they think no one is watching — which is, in the end, most of what my characters are doing.",
+    "I’m drawn to characters who have been silenced by the people closest to them and who have to find their way back to speech without the benefit of a clean apology or a tidy reconciliation. I’m interested in the parents who didn’t know how to love their queer kids and have run out of time to learn. I’m interested in the women who built second selves to survive the first ones. I’m interested in the friends who watched, and the friends who left, and what they owe each other when they meet again.",
+    "I founded <b>The New Theater</b> in 2025 to build a development home for new musicals — a place where original work can move from first spark to full production, and where writers can find collaborators, rooms, and audiences outside the usual gatekeeping structures. The work I make and the work I produce are part of the same project: more voices in the room, and fewer of them apologizing for being there."
+  ],
 
   works: [
     {

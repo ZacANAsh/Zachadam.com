@@ -69,6 +69,7 @@ function PNav() {
 // ---------- MASTHEAD (on slate bg) ----------
 function PMasthead() {
   const S = window.SITE;
+  const [open, setOpen] = React.useState(false);
   return (
     <section id="top" style={{ borderBottom:`2px solid ${P.bgRule}`, padding:"24px 64px 64px" }}>
       <div style={{ height:3, background:P.bgInk, marginBottom:48 }}></div>
@@ -133,17 +134,31 @@ function PMasthead() {
               {S.statementMore}
             </p>
             <div style={{ marginTop:36, paddingTop:20, borderTop:`1px solid ${P.bgRule}`,
-              display:"flex", justifyContent:"space-between", alignItems:"baseline" }}>
+              display:"flex", justifyContent:"space-between", alignItems:"baseline", gap:16 }}>
               <span style={{ fontFamily:F.display, fontWeight:800, fontSize:15,
                 letterSpacing:".22em", textTransform:"uppercase", color:P.bgInk }}>
                 — Zach Adam
               </span>
-              <span style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".25em", color:P.bgInkSub }}>
-                READ FULL STATEMENT ↓
-              </span>
+              <button onClick={() => setOpen(o => !o)} style={{
+                fontFamily:F.mono, fontSize:10, letterSpacing:".25em", color:P.amber,
+                background:"none", border:"none", padding:0, cursor:"pointer",
+                textTransform:"uppercase", whiteSpace:"nowrap" }}>
+                {open ? "Show less ↑" : "Read full statement ↓"}
+              </button>
             </div>
           </div>
         </div>
+
+        {open && (
+          <div style={{ marginTop:44, paddingTop:40, borderTop:`1px solid ${P.bgRule}`, maxWidth:860 }}>
+            {S.statementFull.map((p, i) => (
+              <p key={i} style={{
+                fontFamily:F.body, fontSize:18, lineHeight:1.72, color:P.bgInkSub,
+                margin: i === S.statementFull.length - 1 ? 0 : "0 0 22px", textWrap:"pretty"
+              }} dangerouslySetInnerHTML={{ __html: p }} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -253,7 +268,7 @@ function PWork() {
 
               {/* Voice! poster (right) — light card on beige section */}
               {!isFeatured && w.poster && (
-                <div style={{
+                <div className="voice-card" style={{
                   order:2, alignSelf:"stretch", aspectRatio:"1/1",
                   background:P.light, border:`1px solid ${P.charcoal}`,
                   padding:24,
