@@ -7,14 +7,15 @@ window.SITE = {
   // Short bio — used on About
   bio: {
     paragraphs: [
-      "Zach Adam is a writer-composer whose musicals are about people fighting their way to being heard. His work moves between intimate contemporary realism and meta, mythic comedy, but the question underneath is the same: <i>what does it cost to finally speak, and what does it cost not to?</i>",
-      "His career as a songwriter, composer, and book writer has spanned New York, Los Angeles, Paris, Amsterdam, Tel Aviv, and Nashville. He won the Billboard Songwriting Contest, held a staff-writing contract with BMG, and wrote and produced multiple Top 20 Billboard hits for artists including Martha Wash, Offer Nissim, and the First Ladies of Disco.",
-      "In 2025 he founded <b>The New Theater</b>, a Nashville nonprofit dedicated to originating, developing, and producing new works of musical theater. He serves as its Artistic Director. Zach is a voting member of the Dramatists Guild and a member of ASCAP and New Musical Theatre of Nashville."
+      "Zach Adam is a Billboard Songwriting Contest winner, multi-Top-20 hitmaker, PMG recording artist and BMG staff writer, and recipient of ACUM Composer of the Year and Song of the Year awards. He has written and produced Top 20 Billboard hits for artists including Martha Wash, Offer Nissim, and the First Ladies of Disco. As a writer-composer of musical theater, his work is about people fighting their way to being heard, and his career has spanned New York, Los Angeles, Paris, Amsterdam, Tel Aviv, and Nashville.",
+      "He wrote book, music, and lyrics for <i>Homebound</i>, a chamber musical in which a runaway queer musician is trapped inside his childhood home with his dying, estranged father by the 2020 lockdown — and the two have one last chance to dismantle a decade of silence. Selected from hundreds of new-musical submissions, <i>Homebound</i> will receive its festival run at the 2026 Broadway Bound Theatre Festival at AMT Theater in NYC.",
+      "With co-writer Eidan Lipper, he is the composer-lyricist and co-book-writer of <i>Voice!</i>, an ensemble musical that turns <i>The Little Mermaid</i> inside out: a young woman in a 19th-century fishing town disguises herself as a male writer to compete in a fairytale contest, and the parallel story she invents becomes the engine of her own escape. <i>Voice!</i> was selected as the sole musical for AMDA SummerFest 2026, and was recently presented in concert featuring Tony winner Bonnie Milligan and Donald Webber Jr.",
+      "Zach is the founder and Artistic Director of <b>The New Theater</b>, a Nashville nonprofit dedicated to originating, developing, and producing new musicals. ASCAP. Dramatists Guild."
     ],
     facts: [
       ["Based",    "Nashville, TN & NYC"],
       ["Founder",  "The New Theater (2025)"],
-      ["Honors",   "Billboard Songwriting Contest winner"],
+      ["Honors",   "Billboard winner · ACUM Composer of the Year"],
       ["Member",   "Dramatists Guild · ASCAP"]
     ]
   },
@@ -41,7 +42,7 @@ window.SITE = {
         "Book: Zach Adam & Eidan Lipper",
         "Music & Lyrics: Zach Adam (additional music: Eidan Lipper)"
       ],
-      site: null
+      site: "voicemusicals.com"
     }
   ],
 
@@ -62,7 +63,8 @@ window.SITE = {
 
   projects: [
     { label: "The New Theater", url: "thenewtheater.org",    note: "Nashville nonprofit — new musicals" },
-    { label: "Homebound",       url: "homeboundmusical.com", note: "Current musical" }
+    { label: "Homebound",       url: "homeboundmusical.com", note: "Current musical" },
+    { label: "Voice!",          url: "voicemusicals.com",    note: "Current musical" }
   ],
 
   contactEmail: "contactzachonline+website@gmail.com"

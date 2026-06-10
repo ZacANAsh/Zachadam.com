@@ -77,14 +77,15 @@ function PMasthead() {
       <img src="assets/logo-zachadam.png" alt="Zach Adam"
            style={{ width:"100%", height:"auto", display:"block", filter:"invert(1) brightness(1.02)" }} />
 
-      {/* Roles row */}
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:36,
-        fontFamily:F.display, fontSize:18, fontWeight:600, letterSpacing:".12em",
-        textTransform:"uppercase", color:P.bgInk }}>
+      {/* Roles row — display-headline feel, matching section titles */}
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:40,
+        flexWrap:"wrap", rowGap:6,
+        fontFamily:F.display, fontSize:30, fontWeight:800, letterSpacing:"-0.025em",
+        color:P.bgInk }}>
         {S.tagline.map((t,i) => (
           <React.Fragment key={i}>
             <span>{t}</span>
-            {i < S.tagline.length-1 && <span style={{ color:P.amber, fontSize:10 }}>●</span>}
+            {i < S.tagline.length-1 && <span style={{ color:P.amber, fontSize:11, alignSelf:"center" }}>●</span>}
           </React.Fragment>
         ))}
       </div>
@@ -202,7 +203,7 @@ function PWork() {
               {isFeatured && w.poster ? (
                 <img src={w.poster} alt={w.title} style={{
                   width:"100%", aspectRatio:"1/1", objectFit:"cover", display:"block",
-                  border:`1px solid ${P.charcoal}`, boxShadow:`16px 16px 0 ${P.charcoal}`
+                  border:`1px solid ${P.charcoal}`
                 }} />
               ) : null}
 
@@ -255,7 +256,7 @@ function PWork() {
                 <div style={{
                   order:2, alignSelf:"stretch", aspectRatio:"1/1",
                   background:P.light, border:`1px solid ${P.charcoal}`,
-                  boxShadow:`14px 14px 0 ${P.charcoal}`, padding:24,
+                  padding:24,
                   display:"flex", alignItems:"center", justifyContent:"center"
                 }}>
                   <img src={w.poster} alt={w.title} style={{ width:"100%", height:"100%", objectFit:"contain", display:"block" }} />
@@ -440,7 +441,7 @@ function PContact() {
               fontWeight:800, textTransform:"uppercase", textDecoration:"none"
             }}
           >
-            Contact me
+            Contact Zach
             <span style={{ fontFamily:F.display, fontSize:32, lineHeight:1 }}>→</span>
           </a>
           <p style={{ fontFamily:F.body, fontStyle:"italic", fontSize:17, color:P.bgInkSub, lineHeight:1.5, marginTop:24, maxWidth:520 }}>
