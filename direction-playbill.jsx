@@ -92,7 +92,7 @@ function PMasthead() {
       </div>
 
       {/* Artist statement — editorial spread w/ photo */}
-      <div style={{ marginTop:80, paddingTop:36, borderTop:`1px solid ${P.bgRule}` }}>
+      <div style={{ marginTop:64, paddingTop:32, borderTop:`1px solid ${P.bgRule}` }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", gap:24 }}>
           <div style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".3em", color:P.amber, textTransform:"uppercase" }}>
             Artist Statement — An Excerpt
@@ -112,7 +112,7 @@ function PMasthead() {
           “{S.statement}”
         </blockquote>
 
-        <div style={{ marginTop:64, display:"grid", gridTemplateColumns:"1.45fr 1fr", gap:56, alignItems:"start" }}>
+        <div style={{ marginTop:52, display:"grid", gridTemplateColumns:"1.45fr 1fr", gap:56, alignItems:"start" }}>
           <figure style={{ margin:0 }}>
             <img
               src="assets/zach-shore.jpg"
@@ -120,14 +120,9 @@ function PMasthead() {
               style={{
                 width:"100%", aspectRatio:"3/2", objectFit:"cover",
                 objectPosition:"center 40%", display:"block",
-                border:`1px solid ${P.bgInk}`, boxShadow:`10px 10px 0 ${P.charcoal}`
+                border:`1px solid ${P.bgInk}`
               }}
             />
-            <figcaption style={{ display:"flex", justifyContent:"space-between", marginTop:14,
-              fontFamily:F.mono, fontSize:10, letterSpacing:".28em", color:P.bgInkSub, textTransform:"uppercase" }}>
-              <span>Fig. I — On the Coast</span>
-              <span>Photographed Abroad · MMXXIV</span>
-            </figcaption>
           </figure>
           <div style={{ paddingTop:8 }}>
             <p style={{ fontFamily:F.body, fontSize:18, lineHeight:1.65, color:P.bgInkSub, margin:0, textWrap:"pretty" }}>
@@ -170,7 +165,7 @@ function PSectionHeader({ n, eyebrow, title, sub, anchor, total, dark = false })
   const inkSub = dark ? P.bgInkSub : P.altInkSub;
   const rule   = dark ? P.bgRule   : P.altRule;
   return (
-    <div id={anchor} style={{ padding:"120px 64px 28px", borderBottom:`1px solid ${rule}` }}>
+    <div id={anchor} style={{ padding:"96px 64px 24px", borderBottom:`1px solid ${rule}` }}>
       <div style={{ display:"flex", alignItems:"baseline", gap:24, marginBottom:16 }}>
         <span style={{ fontFamily:F.display, fontSize:11, letterSpacing:".35em", color:P.amber, fontWeight:700, textTransform:"uppercase" }}>
           {eyebrow}
@@ -204,14 +199,14 @@ function PWork() {
         title="The Musicals."
         sub="Two new musicals — both in active development. Open inquiries for licensing, development partnership, and producing."
       />
-      <div style={{ padding:"32px 64px 96px" }}>
+      <div style={{ padding:"24px 64px 80px" }}>
         {S.works.map((w, i) => {
           const isFeatured = i === 0;
           return (
             <div key={i} style={{
               display:"grid",
               gridTemplateColumns: isFeatured ? "1.05fr 1fr" : "1fr 1.05fr",
-              gap:64, padding:"64px 0",
+              gap:64, padding:"52px 0",
               borderTop: i === 0 ? "none" : `1px solid ${P.altRule}`,
               alignItems:"center"
             }}>
@@ -296,10 +291,10 @@ function PMusic() {
         title="On Record."
         sub="Original songs as an artist, plus a catalog of writing and production for others. Music videos below."
       />
-      <div style={{ padding:"40px 64px 96px" }}>
+      <div style={{ padding:"32px 64px 80px" }}>
 
         {/* Two Spotify embeds */}
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:36, marginBottom:64 }}>
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:36, marginBottom:52 }}>
           {[
             { label: "▶ AS AN ARTIST",                  url: `https://open.spotify.com/embed/artist/${S.spotifyArtist}?utm_source=generator&theme=0`,    open: `https://open.spotify.com/artist/${S.spotifyArtist}`,    caption: "ZACH ADAM · ARTIST" },
             { label: "▶ WRITTEN & PRODUCED FOR OTHERS", url: `https://open.spotify.com/embed/playlist/${S.spotifyPlaylist}?utm_source=generator&theme=0`, open: `https://open.spotify.com/playlist/${S.spotifyPlaylist}`, caption: "SELECT CATALOG · BILLBOARD TOP 20 + MORE" }
@@ -308,7 +303,7 @@ function PMusic() {
               <div style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".3em", color:P.amber, marginBottom:14 }}>
                 {e.label}
               </div>
-              <div style={{ border:`1.5px solid ${P.bgInk}`, boxShadow:`10px 10px 0 ${P.charcoal}`, background:P.charcoal }}>
+              <div style={{ border:`1.5px solid ${P.bgInk}`, background:P.charcoal }}>
                 <iframe src={e.url} width="100%" height="380" frameBorder="0"
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy" style={{ display:"block" }}></iframe>
@@ -335,7 +330,7 @@ function PMusic() {
               <a key={i} href={v.url} target="_blank" rel="noreferrer" style={{ textDecoration:"none", color:"inherit", display:"block" }}>
                 <div style={{
                   aspectRatio:"16/9", position:"relative", overflow:"hidden",
-                  border:`1px solid ${P.bgInk}`, boxShadow:`8px 8px 0 ${P.charcoal}`, background:"#000"
+                  border:`1px solid ${P.bgInk}`, background:"#000"
                 }}>
                   <img src={`https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`} alt={v.title}
                        style={{ width:"100%", height:"100%", objectFit:"cover", display:"block" }}
@@ -366,61 +361,30 @@ function PMusic() {
 
 // ---------- ABOUT (alt section: beige) ----------
 function PAbout() {
-  const S = window.SITE;
+  const B = window.SITE.bio;
+  const para = { fontFamily:F.body, fontSize:18, lineHeight:1.7, color:P.altInk, margin:"0 0 22px", textWrap:"pretty" };
   return (
     <section style={{ background:P.alt, color:P.altInk, borderTop:`2px solid ${P.charcoal}`, borderBottom:`2px solid ${P.charcoal}` }}>
       <PSectionHeader n={3} total={4} eyebrow="The Author" anchor="about" title="About." sub={null} />
-      <div style={{ padding:"48px 64px 96px", display:"grid", gridTemplateColumns:"300px 1fr 1fr", gap:56, alignItems:"start" }}>
-        <div>
-          <div style={{ aspectRatio:"3/4", backgroundImage:"url(assets/zach-portrait.png)",
+      <div style={{ padding:"52px 64px 88px", display:"grid", gridTemplateColumns:"minmax(0,5fr) minmax(0,7fr)", gap:80, alignItems:"start" }}>
+        <figure className="about-portrait" style={{ margin:0, position:"sticky", top:96 }}>
+          <div style={{ aspectRatio:"4/5", backgroundImage:"url(assets/zach-portrait.png)",
             backgroundSize:"cover", backgroundPosition:"center 18%", filter:"sepia(28%) contrast(102%)",
-            border:`1px solid ${P.charcoal}`, boxShadow:`10px 10px 0 ${P.charcoal}` }}></div>
-          <div style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".25em", color:P.altInkSub, marginTop:14, textAlign:"center" }}>
-            ZACH ADAM
-          </div>
-        </div>
-        <div>
-          {S.bio.paragraphs.map((p, i) => (
-            <p key={i} style={{
-              fontFamily:F.body, fontSize: i===0 ? 22 : 17, lineHeight:1.6,
-              color: i===0 ? P.altInk : P.altInkSub,
-              margin: i===0 ? "0 0 20px" : "0 0 16px", textWrap:"pretty"
-            }} dangerouslySetInnerHTML={{ __html: p }} />
+            border:`1px solid ${P.charcoal}` }}></div>
+        </figure>
+        <div style={{ maxWidth:660 }}>
+          <p style={{ fontFamily:F.body, fontSize:27, lineHeight:1.42, letterSpacing:"-0.01em", color:P.altInk, margin:"0 0 40px", textWrap:"pretty" }}
+             dangerouslySetInnerHTML={{ __html: B.paragraphs[0] }} />
+          {B.paragraphs.slice(1).map((p, i) => (
+            <p key={i} style={para} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
-        </div>
-        <div>
-          <div style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".3em", color:P.amber, paddingBottom:14, borderBottom:`2px solid ${P.charcoal}` }}>
-            AT A GLANCE
-          </div>
-          {S.bio.facts.map((f, i) => (
-            <div key={i} style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline",
-              padding:"16px 0", borderBottom:`1px dotted ${P.altRule}`, gap:16 }}>
-              <span style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".25em", color:P.altInkSub, whiteSpace:"nowrap" }}>
-                {f[0].toUpperCase()}
-              </span>
-              <span style={{ fontFamily:F.display, fontWeight:700, fontSize:16, textAlign:"right", textWrap:"balance", color:P.altInk }}>
-                {f[1]}
-              </span>
-            </div>
+          <div style={{ width:56, height:3, background:P.amber, margin:"48px 0 32px" }}></div>
+          {B.studio.map((p, i) => (
+            <p key={i} style={para} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
-          <div style={{ marginTop:28, display:"flex", flexDirection:"column", gap:12 }}>
-            {S.projects.map((pr, i) => (
-              <a key={i} href={`https://${pr.url}`} target="_blank" rel="noreferrer" style={{
-                textDecoration:"none", color:P.altInk, padding:"14px 16px",
-                border:`1.5px solid ${P.charcoal}`,
-                display:"flex", justifyContent:"space-between", alignItems:"center", gap:12
-              }}>
-                <span>
-                  <div style={{ fontFamily:F.display, fontWeight:800, fontSize:15, textTransform:"uppercase", letterSpacing:"-0.005em" }}>
-                    {pr.label}
-                  </div>
-                  <div style={{ fontFamily:F.body, fontStyle:"italic", fontSize:13, color:P.altInkSub, marginTop:2 }}>
-                    {pr.note}
-                  </div>
-                </span>
-                <span style={{ fontFamily:F.mono, fontSize:9, letterSpacing:".22em", color:P.amber, whiteSpace:"nowrap" }}>↗</span>
-              </a>
-            ))}
+          <div style={{ marginTop:40, paddingTop:18, borderTop:`1px solid ${P.altRule}`,
+            fontFamily:F.mono, fontSize:11, letterSpacing:".22em", lineHeight:1.7, color:P.altInkSub, textTransform:"uppercase" }}>
+            {B.memberships}
           </div>
         </div>
       </div>
@@ -439,7 +403,7 @@ function PContact() {
         title="Contact."
         sub="For licensing, development partnership, press, or to say hello."
       />
-      <div style={{ padding:"56px 64px 96px", display:"grid", gridTemplateColumns:"1.4fr 1fr", gap:64, alignItems:"center" }}>
+      <div style={{ padding:"48px 64px 80px", display:"grid", gridTemplateColumns:"1.4fr 1fr", gap:64, alignItems:"center" }}>
         <div>
           <div style={{ fontFamily:F.mono, fontSize:10, letterSpacing:".3em", color:P.amber, marginBottom:18 }}>
             WRITE TO ME
@@ -491,7 +455,7 @@ function PContact() {
 // ---------- FOOTER (charcoal) ----------
 function PFooter() {
   return (
-    <footer style={{ background:P.charcoal, color:P.bgInk, padding:"64px 64px 32px", borderTop:`4px solid ${P.amber}` }}>
+    <footer style={{ background:P.charcoal, color:P.bgInk, padding:"56px 64px 28px", borderTop:`4px solid ${P.amber}` }}>
       <img src="assets/logo-zachadam.png" alt="Zach Adam"
            style={{ width:"100%", height:"auto", display:"block", filter:"invert(1) brightness(1.02)" }} />
       <div style={{ display:"flex", justifyContent:"space-between", marginTop:48, fontFamily:F.mono, fontSize:10, letterSpacing:".3em", color:"rgba(232,216,208,0.6)" }}>

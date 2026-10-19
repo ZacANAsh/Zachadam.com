@@ -7,17 +7,16 @@ window.SITE = {
   // Short bio — used on About
   bio: {
     paragraphs: [
-      "Zach Adam is a Billboard Songwriting Contest winner, multi-Top-20 hitmaker, PMG recording artist and BMG staff writer, and recipient of ACUM Composer of the Year and Song of the Year awards. He has written and produced Top 20 Billboard hits for artists including Martha Wash, Offer Nissim, and the First Ladies of Disco. As a writer-composer of musical theater, his work is about people fighting their way to being heard, and his career has spanned New York, Los Angeles, Paris, Amsterdam, Tel Aviv, and Nashville.",
-      "He wrote book, music, and lyrics for <i>Homebound</i>, a chamber musical in which a runaway queer musician is trapped inside his childhood home with his dying, estranged father by the 2020 lockdown — and the two have one last chance to dismantle a decade of silence. Selected from hundreds of new-musical submissions, <i>Homebound</i> will receive its festival run at the 2026 Broadway Bound Theatre Festival at AMT Theater in NYC.",
-      "With co-writer Eidan Lipper, he is the composer-lyricist and co-book-writer of <i>Voice!</i>, an ensemble musical that turns <i>The Little Mermaid</i> inside out: a young woman in a 19th-century fishing town disguises herself as a male writer to compete in a fairytale contest, and the parallel story she invents becomes the engine of her own escape. <i>Voice!</i> was selected as the sole musical for AMDA SummerFest 2026, and was recently presented in concert featuring Tony winner Bonnie Milligan and Donald Webber Jr.",
-      "Zach is the founder and Artistic Director of <b>The New Theater</b>, a Nashville nonprofit dedicated to originating, developing, and producing new musicals. ASCAP. Dramatists Guild."
+      "Zach Adam is a composer and librettist whose musicals are about people fighting their way to being heard. His work moves between intimate realism and meta, mythic comedy, but the question underneath is the same: <i>what does it cost to finally speak, and what does it cost not to?</i> His career has spanned New York, Los Angeles, Paris, Amsterdam, Tel Aviv, and Nashville.",
+      "He wrote book, music, and lyrics for <i>Homebound</i>, a chamber musical in which a runaway queer musician living in Thailand is trapped inside his childhood home with his stoic, dying father when the 2020 pandemic shuts the borders. Forced into the same four walls for the first time in a decade, Jack and Frank have one last chance to find a language for everything they never said — a father who has only ever spoken in tools, and a son who left because he had to. <i>Homebound</i> was given a festival workshop production in August 2026 at Manhattan’s AMT Theater, one of two musicals in the Broadway Bound Theatre Festival, directed by Shea Sullivan (Chita Rivera Award nomination, <i>Neurosis</i>).",
+      "With co-writer Eidan Lipper, he is the composer-lyricist and co-book-writer of <i>Voice!</i>, an original ensemble musical set in a 19th-century fishing town where conformity is the only currency. Eighteen-year-old Gabi disguises herself as a male writer to enter a fairytale contest, and the story she invents — about a princess restoring stolen voices to a cursed village — becomes the engine of her own escape. <i>Voice!</i> was the winning selection of the Harbor New Musical Initiative and receives a developmental production in July 2027 at Harbor Theatrics, a St. Louis company devoted to original work. It was given a workshop production at AMDA SummerFest 2026 under Igor Goldin, a Drama Desk nominee for Outstanding Direction of a Musical, following a concert presentation featuring Tony winner Bonnie Milligan and Donald Webber Jr.",
+      "An earlier rock-opera adaptation of <i>Oedipus the King</i> won three awards at the Acco Festival — Best New Musical Adaptation, Best Libretto, and Best Music. He conceived, wrote, composed, and directed <i>Sirens</i>, a Dutch co-production drawn from the Sirens episode of Homer’s <i>Odyssey</i>, between concert and music theater.",
+      "In 2026 Zach received the Roger Allers Legacy Award for Notable Contribution as a Librettist, presented by the CTN Foundation. He is a member of the 2026–27 bookwriting cohort of the BMI Lehman Engel Musical Theatre Workshop."
     ],
-    facts: [
-      ["Based",    "Nashville, TN & NYC"],
-      ["Founder",  "The New Theater (2025)"],
-      ["Honors",   "Billboard winner · ACUM Composer of the Year"],
-      ["Member",   "Dramatists Guild · ASCAP"]
-    ]
+    studio: [
+      "Zach came to musical theater from commercial songwriting. He won the Billboard Songwriting Contest, is a PMG recording artist, signed a publishing deal with BMG, and wrote and produced multiple Top 20 Billboard charting songs for Martha Wash, Offer Nissim, and the First Ladies of Disco. He is a recipient of ACUM Composer of the Year and Song of the Year awards and of the Popularity Award at Romania’s Golden Stag Festival."
+    ],
+    memberships: "Zach is a voting member of the Dramatists Guild and a member of ASCAP."
   },
 
   // Artist statement — pull-quote (statement) + excerpt beside photo (statementMore) + full text (statementFull)
@@ -68,11 +67,6 @@ window.SITE = {
     { label: "TikTok",      url: "https://www.tiktok.com/@zachadamofficial" }
   ],
 
-  projects: [
-    { label: "The New Theater", url: "thenewtheater.org",    note: "Nashville nonprofit — new musicals" },
-    { label: "Homebound",       url: "homeboundmusical.com", note: "Current musical" },
-    { label: "Voice!",          url: "voicemusicals.com",    note: "Current musical" }
-  ],
 
   contactEmail: "contactzachonline+website@gmail.com"
 };

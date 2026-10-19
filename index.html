@@ -29,6 +29,7 @@
         grid-template-columns: 1fr !important;
         gap: 36px !important;
       }
+      .about-portrait { position: static !important; max-width: 420px; }
       /* scale down monstrous display type */
       h2 { font-size: 72px !important; line-height: 0.95 !important; }
       h3 { font-size: 56px !important; line-height: 0.95 !important; }
@@ -39,11 +40,13 @@
     @media (max-width: 640px) {
       nav > div { padding: 14px 18px !important; }
       /* hide the in-nav logo so the 4 links fit; the masthead logo is right below */
-      nav a:first-child { display: none !important; }
+      nav > div > a:first-child { display: none !important; }
+      nav > div { justify-content: center !important; }
       nav a { font-size: 11px !important; letter-spacing: .14em !important; }
       nav > div > div { gap: 14px !important; flex-wrap: wrap !important; justify-content: flex-end !important; }
 
       section, footer { padding-left: 18px !important; padding-right: 18px !important; }
+      #work, #music, #about, #contact { padding-top: 64px !important; }
       section > div { padding-left: 18px !important; padding-right: 18px !important; }
 
       /* masthead */
@@ -91,9 +94,6 @@
         text-align: center !important;
         align-items: center !important;
       }
-
-      /* fact-list rows (about page) — keep label + value on the same line, smaller */
-      section[style*="background: rgb(232, 216, 208)"] span { font-size: 13px !important; }
     }
 
     /* ---------- TINY PHONE (≤380px) ---------- */
